@@ -1,0 +1,32 @@
+# Ignore the virtual environment folder
+env/
+  
+# Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Flask specific files
+instance/
+*.db
+*.sqlite3
+
+# IDE or editor configurations
+.vscode/
+.idea/
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+
+# JetBrains IDEs
+*.iml
+
+# Python environment files
+Pipfile
+Pipfile.lock
+
+# Temporary files created by text editors
+*.swp
