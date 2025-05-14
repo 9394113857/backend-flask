@@ -1,0 +1,5 @@
+Start-Process "chrome" "http://127.0.0.1:5000"; flask run
+
+Start-Process powershell -ArgumentList "Start-Sleep -Seconds 2; Start-Process chrome http://127.0.0.1:5000"; flask run
+
+
