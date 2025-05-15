@@ -1,5 +1,5 @@
-Start-Process "chrome" "http://127.0.0.1:5000"; flask run
+# Start a new PowerShell process that waits 2 seconds and then opens the default browser to http://127.0.0.1:5000
+Start-Process powershell -ArgumentList "Start-Sleep -Seconds 2; Start-Process chrome http://127.0.0.1:5000"
 
-Start-Process powershell -ArgumentList "Start-Sleep -Seconds 2; Start-Process chrome http://127.0.0.1:5000"; flask run
-
-
+# Run the Flask development server (this command should be run in the directory containing app.py or where FLASK_APP is set)
+flask run
