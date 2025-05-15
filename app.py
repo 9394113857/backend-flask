@@ -4,6 +4,7 @@ from logging.handlers import RotatingFileHandler
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 import sqlite3
 from datetime import date
+from datetime import datetime
 from flask_cors import CORS  # Import CORS
 
 # Setup logger
@@ -48,6 +49,12 @@ c.execute('''CREATE TABLE IF NOT EXISTS users (
 )''')  # Create users table if it doesn't exist
 conn.commit()
 conn.close()
+
+@app.route('/')
+def index():
+    """Return a hello world message with current date and time."""
+    now = datetime.now()
+    return f"Hello World! Current date and time: {now.strftime('%Y-%m-%d %H:%M:%S')}"
 
 @app.route('/api/users', methods=['GET'])
 def get_users():
